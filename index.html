@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <main class="main-container">
+
+
+    <!-- Sidebar start -->
+
+
+    <section class="left-section">
+      <div class="steps-container">
+        <div class="step-number">
+          1
+        </div>
+        <div class="step-data">
+          <h2 class="step-h2">
+            Step 1
+          </h2>
+          <h1 class="step-h1">
+
+            Your info
+          </h1>
+        </div>
+      </div>
+      <div class="steps-container">
+        <div class="step-number">
+          2
+        </div>
+        <div class="step-data">
+          <h2 class="step-h2">
+            Step 2
+          </h2>
+          <h1 class="step-h1">
+            Select plan
+          </h1>
+        </div>
+      </div>
+      <div class="steps-container">
+        <div class="step-number">
+          3
+        </div>
+        <div class="step-data">
+          <h2 class="step-h2">
+            Step 3
+          </h2>
+          <h1 class="step-h1">
+            Add-ons
+          </h1>
+        </div>
+      </div>
+      <div class="steps-container">
+        <div class="step-number">
+          4
+        </div>
+        <div class="step-data">
+          <h2 class="step-h2">
+            Step 4
+          </h2>
+          <h1 class="step-h1">
+            Summary
+          </h1>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Sidebar end -->
+
+
+    <section class="right-section">
+
+
+      <!-- Step 1 start -->
+      <div class="step-1-container">
+
+
+        <div class="top-heading-section">
+          <h1 class="main-heading">
+
+            Personal info
+          </h1>
+          <p class="main-para">
+
+            Please provide your name, email address, and phone number.
+          </p>
+        </div>
+
+        <!-- Step 1 MIDDLE CONTAINER start -->
+
+        <form class="middle-info-container common-steps-middle-container">
+          <div class="common-data">
+            <label for="name">Name</label>
+            <input class="common-inputs" type="text" name="name" id="name" onkeyup="checkValidation()" required placeholder="e.g. Stephen King"
+              autocomplete="off">
+              <p class="error none">This field is required , enter alphabets only</p>
+          </div>
+          <div class="common-data">
+            <label for="email">Email Address</label>
+            <input class="common-inputs" type="email" name="name" id="email" onkeyup="checkValidation()" required
+              placeholder=" e.g. stephenking@lorem.com" autocomplete="off">
+              <p class="error none">This field is required , enter proper email</p>
+          </div>
+          <div class="common-data">
+            <label for="number">Phone Number</label>
+            <input class="common-inputs" type="number" name="number" id="number" onkeyup="checkValidation()" required
+              placeholder="e.g. +1 234 567 890" autocomplete="off">
+              <p class="error none">This field is required , only 10 digits</p>
+          </div>
+
+        </form>
+
+        <!-- Step 2 MIDDLE CONTAINER start -->
+        <div class="common-steps-middle-container middle-info-container none">
+          <div class="plan-container  ">
+            <div class="common-plan arcade-plan" onclick="add()">
+              <img src="./assets/images/icon-arcade.svg" alt="" class="plan-icon">
+              <div class="plan-data">
+                <h3 class="plan-name">Arcade</h3>
+                <p class="plan-price">$9/mo</p>
+                <p class="plan-free">2 months free</p>
+              </div>
+            </div>
+            <div class="common-plan advanced-plan" onclick="add()">
+              <img src="./assets/images/icon-advanced.svg" alt="" class="plan-icon">
+              <div class="plan-data">
+                <h3 class="plan-name">Advanced</h3>
+                <p class="plan-price">$12/mo</p>
+                <p class="plan-free">2 months free</p>
+              </div>
+            </div>
+            <div class="common-plan pro-plan" onclick="add()">
+              <img src="./assets/images/icon-pro.svg" alt="" class="plan-icon">
+              <div class="plan-data">
+                <h3 class="plan-name">Pro</h3>
+                <p class="plan-price">$15/mo</p>
+                <p class="plan-free">2 months free</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="plan-time-container">
+            <h3 class="monthly-name">Monthly</h3>
+            <div class="slider-container">
+              <div class="left-slide-btn"></div>
+              <div class="right-slide-btn"></div>
+              <div class="slider"></div>
+            </div>
+            <h3 class="yearly-name">Yearly</h3>
+          </div>
+        </div>
+        <!-- Step 3 MIDDLE CONTAINER start -->
+
+        <div class="middle-container middle-info-container common-steps-middle-container none">
+
+          <div class="services-container">
+            <div class="left-heading-container">
+              <input type="checkbox" name="" id="" class="service-inputs" onclick="checkServiceInputs()">
+              <div class="service-type">
+
+                <h3 class="plan-name">Online service</h3>
+                <p class="plan-price">Access to multiplayer games</p>
+              </div>
+            </div>
+
+            <p class="plan-free-2">+$1/mo</p>
+          </div>
+          <div class="services-container">
+            <div class="left-heading-container">
+              <input type="checkbox" name="" id="" class="service-inputs" onclick="checkServiceInputs()">
+              <div class="service-type">
+
+                <h3 class="plan-name">Larger storage</h3>
+                <p class="plan-price">Extra 1TB of cloud save</p>
+              </div>
+            </div>
+
+
+            <p class="plan-free-2">+$2/mo</p>
+
+          </div>
+          <div class="services-container">
+            <div class="left-heading-container">
+              <input type="checkbox" name="" id="" class="service-inputs" onclick="checkServiceInputs()">
+              <div class="service-type">
+
+                <h3 class="plan-name">Customizable Profile</h3>
+                <p class="plan-price">Custom theme on your profile</p>
+              </div>
+            </div>
+
+            <p class="plan-free-2">+$2/mo</p>
+
+          </div>
+
+        </div>
+
+        <!-- Step 4 MIDDLE CONTAINER start -->
+
+        <div class="step-4-middle-container middle-info-container common-steps-middle-container none">
+
+          <div class="top-summary-section">
+            <div class="arcade-container">
+              <div class="arcade-div">
+
+                <div class="left-arcade-container"><h3 class="plan-name final-plan-name">Arcade </h3>
+                <span class="plan-name plan-validity">(Monthly)</span></div>
+                <a href="#" class="change-link">change</a>
+              </div>
+
+              <h3 class="plan-name ">$<span class="selected-plan-price">9</span>/<span class="selected-plan-duration">mo</span></h3>
+            </div>
+            <div class="online-service-container common-4-container none">
+
+              <p class="plan-price">Online service</p>
+              <p class="final-online-service-plan common-number">+$<span class="common-4-plan">1</span>/<span class="selected-plan-duration">mo</span></p>
+            </div>
+            <div class="larger-storage-container common-4-container none">
+
+              <p class="plan-price">Larger storage</p>
+              <p class="final-larger-storage-plan common-number">+$<span class="common-4-plan">2</span>/<span class="selected-plan-duration">mo</span></p>
+            </div>
+            <div class="larger-storage-container common-4-container none">
+
+              <p class="plan-price">Customizable profile</p>
+              <p class="final-larger-storage-plan common-number">+$<span class="common-4-plan">2</span>/<span class="selected-plan-duration">mo</span></p>
+            </div>
+          </div>
+          <div class="bottom-summary-section flex-total">
+
+            <p class="plan-price calculated-plan-time">Total (per month)</p>
+            <p class="calculated-plan-heading">+$<span class="calculated-plan">9</span>/<span class="selected-plan-duration">mo</span></p>
+          </div>
+        </div>
+
+
+        <!-- Step 5 MIDDLE CONTAINER start -->
+
+        <div class="step-5-container middle-info-container common-steps-middle-container none">
+          <div class="thank-img-div">
+            <img class="icon-thank" src="./assets/images/icon-thank-you.svg" alt="">
+          </div>
+          <div class="thanks-container">
+            <h1 class="main-heading">
+              Thank you!
+            </h1>
+            <p class="main-para">
+
+
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free
+              to email us at support@loremgaming.com.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="plan-bottom-container">
+          <a href="#" class="go-back">Go Back</a>
+          <button type="button" class="next-btn" disabled>
+            Next Step
+          </button>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
